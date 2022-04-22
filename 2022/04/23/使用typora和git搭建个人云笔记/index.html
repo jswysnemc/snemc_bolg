@@ -1,0 +1,332 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>使用typora和git搭建个人云笔记 | Snemc</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="使用typora+git+picGo创建云笔记 安装typora安装 下载链接(支持正版) markDown笔记基本使用 Markdown语法讲解（上）——基本语法 - 简书 (jianshu.com) 统一的格式–便于分享 规范的说明文档 自己的笔记文件     安装git 版本控制工具 github开源代码托管平台 项目分享社区 git下载链接 下载安装  按步骤一步步安装,一般都选默认">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用typora和git搭建个人云笔记">
+<meta property="og:url" content="http://example.com/2022/04/23/%E4%BD%BF%E7%94%A8typora%E5%92%8Cgit%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%BA%91%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Snemc">
+<meta property="og:description" content="使用typora+git+picGo创建云笔记 安装typora安装 下载链接(支持正版) markDown笔记基本使用 Markdown语法讲解（上）——基本语法 - 简书 (jianshu.com) 统一的格式–便于分享 规范的说明文档 自己的笔记文件     安装git 版本控制工具 github开源代码托管平台 项目分享社区 git下载链接 下载安装  按步骤一步步安装,一般都选默认">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+<meta property="article:published_time" content="2022-04-22T16:44:58.000Z">
+<meta property="article:modified_time" content="2022-04-22T16:45:33.894Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2022/04/23/%E4%BD%BF%E7%94%A8typora%E5%92%8Cgit%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%BA%91%E7%AC%94%E8%AE%B0/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '使用typora和git搭建个人云笔记',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-04-23 00:45:33'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.1.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Snemc</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">使用typora和git搭建个人云笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-04-22T16:44:58.000Z" title="Created 2022-04-23 00:44:58">2022-04-23</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-04-22T16:45:33.894Z" title="Updated 2022-04-23 00:45:33">2022-04-23</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="使用typora和git搭建个人云笔记"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="使用typora-git-picGo创建云笔记"><a href="#使用typora-git-picGo创建云笔记" class="headerlink" title="使用typora+git+picGo创建云笔记"></a>使用typora+git+picGo创建云笔记</h2><ul>
+<li><h3 id="安装typora安装"><a href="#安装typora安装" class="headerlink" title="安装typora安装"></a>安装typora安装</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://typoraio.cn/">下载链接(支持正版)</a></li>
+<li>markDown笔记基本使用<ul>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/e6593b56ca0c">Markdown语法讲解（上）——基本语法 - 简书 (jianshu.com)</a></li>
+<li>统一的格式–便于分享</li>
+<li>规范的说明文档</li>
+<li>自己的笔记文件</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h3><ul>
+<li>版本控制工具</li>
+<li>github开源代码托管平台</li>
+<li>项目分享社区</li>
+<li><a target="_blank" rel="noopener" href="https://git-scm.com/download/win">git下载链接</a></li>
+<li>下载安装<ul>
+<li><img src="https://gitee.com/snemc/images/raw/master/img/%E9%80%89%E6%8B%A932%2064%E4%BD%8Dgit.png" alt="选择32 64位git"></li>
+<li>按步骤一步步安装,一般都选默认</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="配置github-x2F-gitee网站的ssh密钥"><a href="#配置github-x2F-gitee网站的ssh密钥" class="headerlink" title="配置github&#x2F;gitee网站的ssh密钥"></a>配置github&#x2F;gitee网站的ssh密钥</h3><ul>
+<li><p><a target="_blank" rel="noopener" href="https://gitee.com/">gitee官网</a></p>
+</li>
+<li><p>注册gitee账号或者注册GitHub账号</p>
+<p>  <img src="https://gitee.com/snemc/images/raw/master/img/gitee%E6%B3%A8%E5%86%8C.png" alt="gitee注册"></p>
+</li>
+<li><p>注意提前开启文件拓展名和显示隐藏的文件</p>
+<p>  在[查看]中勾选对应选项即可<img src="https://gitee.com/snemc/images/raw/master/img/%E5%8B%BE%E9%80%89%E6%96%87%E4%BB%B6%E6%8B%93%E5%B1%95%E5%90%8D%E5%92%8C%E9%9A%90%E8%97%8F%E7%9A%84%E9%80%89%E9%A1%B9.png" alt="勾选文件拓展名和隐藏的选项"></p>
+</li>
+<li><p>在用户目录(C:\用户\你的用户名)下创建一个.gitconfig文件</p>
+</li>
+<li><p>创建一个名为.gitconfig的文件</p>
+</li>
+<li><p><img src="https://gitee.com/snemc/images/raw/master/img/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA.gitconfig%E6%96%87%E4%BB%B6.png" alt="创建一个.gitconfig文件"></p>
+</li>
+</ul>
+</li>
+<li><p>创建文件后使用记事本输入以下内容,注意[邮箱地址]和[用户名]替换为你自己注册的</p>
+<p>  你也可以选择先创建txt文件然后改名</p>
+</li>
+<li><pre><code>[user]
+email = 邮箱地址
+name= 用户名
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 保存后在这里右键选择[Git Bash Here]</span><br><span class="line"></span><br><span class="line">    ![右键选择git bash here](https://gitee.com/snemc/images/raw/master/img/%E5%8F%B3%E9%94%AE%E9%80%89%E6%8B%A9git%20bash%20here.png)</span><br><span class="line"></span><br><span class="line">- 在打开的窗口中输入以下命令</span><br><span class="line"></span><br><span class="line">- ```git</span><br><span class="line">  //注册邮箱为你的邮箱地址</span><br><span class="line">  ssh-keygen -t rsa -C &quot;注册邮箱&quot;</span><br></pre></td></tr></table></figure>
+
+![回车1](https://gitee.com/snemc/images/raw/master/img/%E5%9B%9E%E8%BD%A62.png)
+
+![不停回车](https://gitee.com/snemc/images/raw/master/img/%E4%B8%8D%E5%81%9C%E5%9B%9E%E8%BD%A6.png)
+</code></pre>
+</li>
+<li><p>根据提示一步步按回车</p>
+</li>
+<li><p>然后输入以下命令</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat .ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>复制这串文本(从[ssh-rsa AAA….]开始到最后你的邮箱地址为止)</p>
+</li>
+<li><p>(注意选中后右键选择copy,使用快捷键是无效的)</p>
+<p>  <img src="https://gitee.com/snemc/images/raw/master/img/%E5%A4%8D%E5%88%B6%E5%AF%86%E9%92%A5%E5%86%85%E5%AE%B9.png" alt="复制密钥内容"></p>
+</li>
+<li><p>打开你的gitee网站或者github网站</p>
+</li>
+<li><p>在个人中心选择设置然后选择添加ssh密钥输入密码添加成功</p>
+<ul>
+<li>进入主页后点击头像,选择设置</li>
+</ul>
+<p>  <img src="https://gitee.com/snemc/images/raw/master/img/%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE.png" alt="打开设置"></p>
+<ul>
+<li><p>进入设置后选择ssh公钥</p>
+<p>  <img src="https://gitee.com/snemc/images/raw/master/img/%E6%B7%BB%E5%8A%A0ssh%E5%85%AC%E9%92%A5.png" alt="添加ssh公钥"></p>
+</li>
+<li><p>添加标题然后粘贴复制的内容,点击确认后提示输入密码,随后添加成功</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="配置picGo图床"><a href="#配置picGo图床" class="headerlink" title="配置picGo图床"></a>配置picGo图床</h3><ul>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo/releases/download/v2.3.1-beta.2/PicGo-Setup-2.3.1-beta.2-x64.exe">picGo下载链接</a></p>
+</li>
+<li><p>下载安装(记住安装位置)</p>
+</li>
+<li><p>安装gitee插件</p>
+<ul>
+<li><img src="https://gitee.com/snemc/images/raw/master/img/picgo%E5%AE%89%E8%A3%85gitee%E6%8F%92%E4%BB%B6.png" alt="picgo安装gitee插件"></li>
+<li>打开picGo后点击[插件设置]</li>
+<li>搜索gitee或者github</li>
+<li>选择1.12版本</li>
+</ul>
+</li>
+<li><p>按提示下载安装nodejs(建议记得安装位置,这个编程环境以后学习时会用到)</p>
+<ul>
+<li><img src="https://gitee.com/snemc/images/raw/master/img/%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85nodejs.png" alt="下载安装nodejs"></li>
+<li>安装成功后,重新打开picGO重新安装gitee插件</li>
+</ul>
+</li>
+<li><p>打开gitee&#x2F;GitHub网站主页创建仓库</p>
+<ul>
+<li><p><img src="https://gitee.com/snemc/images/raw/master/img/gitee%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93.png" alt="gitee新建仓库"></p>
+</li>
+<li><p><img src="https://gitee.com/snemc/images/raw/master/img/%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93.png" alt="创建仓库"></p>
+</li>
+<li><p><img src="https://gitee.com/snemc/images/raw/master/img/%E7%82%B9%E5%87%BB%E5%88%9D%E5%A7%8B%E5%8C%96.png" alt="点击初始化"></p>
+</li>
+<li><p>复制仓库ssh链接备用(建议win10的使用win+v键打开历史剪贴板)</p>
+<p>  <img src="https://gitee.com/snemc/images/raw/master/img/%E7%82%B9%E5%87%BB%E8%BF%99%E4%B8%89%E4%B8%AA,%E5%A4%8D%E5%88%B6ssh%E9%93%BE%E6%8E%A5.png" alt="点击这三个,复制ssh链接"></p>
+</li>
+</ul>
+</li>
+<li><p>设置用户令牌</p>
+<ul>
+<li><p>同样的打开gitee主页里点击头像-设置</p>
+<p>  <img src="https://gitee.com/snemc/images/raw/master/img/%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE.png" alt="打开设置"></p>
+</li>
+<li><p>选择[私人令牌]</p>
+<p>  <img src="https://gitee.com/snemc/images/raw/master/img/%E8%AE%BE%E7%BD%AEgitee%E7%A7%81%E4%BA%BA%E4%BB%A4%E7%89%8C.png" alt="设置gitee私人令牌"></p>
+</li>
+<li><p>输入私人令牌描述</p>
+</li>
+<li><p>勾选选项(仅user-info选项即可)</p>
+</li>
+<li><p>输入密码后复制令牌</p>
+</li>
+</ul>
+</li>
+<li><p>配置</p>
+<ul>
+<li>打开picGo选择gitee</li>
+<li>按如下步骤输入即可</li>
+</ul>
+<p>  <img src="https://gitee.com/snemc/images/raw/master/img/Snipaste_2022-03-03_00-22-35.png" alt="Snipaste_2022-03-03_00-22-35"></p>
+<ul>
+<li><p>repo这里输入的是你的仓库的浏览器地址[<a target="_blank" rel="noopener" href="https://gitee.com/]%E5%90%8E%E9%9D%A2%E7%9A%84%E9%83%A8%E5%88%86">https://gitee.com/]后面的部分</a></p>
+<p>  <img src="https://gitee.com/snemc/images/raw/master/img/%E8%BE%93%E5%85%A5%E7%9A%84repo.png" alt="输入的repo"></p>
+</li>
+</ul>
+</li>
+<li><p>打开typora配置</p>
+<ul>
+<li><p>依次打开文件</p>
+</li>
+<li><p>偏好设置</p>
+</li>
+<li><p>图像</p>
+<ul>
+<li>勾选[插入时自动转义图片URL]</li>
+</ul>
+</li>
+<li><p>上传服务选择PicGo(app)</p>
+</li>
+<li><p>PicGo路径选择你安装的路径最后勾选这个本体exe文件即可</p>
+<p>  <img src="https://gitee.com/snemc/images/raw/master/img/%E9%80%89%E6%8B%A9picGo.png" alt="选择picGo"></p>
+</li>
+<li><p>最后测试点击验证图片上传选项即可</p>
+<p>  <img src="https://gitee.com/snemc/images/raw/master/img/%E9%AA%8C%E8%AF%81.png" alt="验证"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="编写bat文件一键上传"><a href="#编写bat文件一键上传" class="headerlink" title="编写bat文件一键上传"></a>编写bat文件一键上传</h3><ul>
+<li>在合适的位置创建一个文件夹,在里面专门存放笔记文件(.md文件)</li>
+<li>在这个文件夹里用新建一个文本文件</li>
+<li>用记事本输入以下bat代码,</li>
+<li>注意把[你复制的你仓库的ssh地址]改为相应的正确地址即可</li>
+</ul>
+  <figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chcp</span> <span class="number">65001</span></span><br><span class="line"><span class="comment">rem echo .gitignore&gt;.gitignore</span></span><br><span class="line"><span class="comment">rem echo sc.bat&gt;.gitignore</span></span><br><span class="line"><span class="comment">rem echo ###&gt;README</span></span><br><span class="line"><span class="built_in">rd</span> /s/q <span class="variable">%cd%</span>\.git</span><br><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m &#x27;使用脚本上传的文件&#x27;</span><br><span class="line">git remote remove auto</span><br><span class="line">git remote add auto 你复制的你仓库的ssh地址</span><br><span class="line">git push -u auto master -f</span><br><span class="line"><span class="built_in">rd</span> /s/q <span class="variable">%cd%</span>\.git</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>保存文件后修改全部文件名为sc.bat</p>
+</li>
+<li><p>随后你可以在此处创建.md的文件内容,可以运行这个bat文件直接上传到gitee中</p>
+<p>  <img src="https://gitee.com/snemc/images/raw/master/img/Snipaste_2022-03-04_20-25-04.png" alt="Snipaste_2022-03-04_20-25-04"></p>
+</li>
+<li><p>运行bat之后查看你的仓库</p>
+<p>  <img src="https://gitee.com/snemc/images/raw/master/img/Snipaste_2022-03-04_20-27-13.png" alt="Snipaste_2022-03-04_20-27-13"></p>
+</li>
+<li><p>你会发现文件都已经上传到仓库里,并且可以直接预览md文件</p>
+</li>
+<li><p>之后你可以使用其他设备登录gitee,直接查看笔记</p>
+</li>
+</ul>
+</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">John Doe</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2022/04/23/%E4%BD%BF%E7%94%A8typora%E5%92%8Cgit%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%BA%91%E7%AC%94%E8%AE%B0/">http://example.com/2022/04/23/%E4%BD%BF%E7%94%A8typora%E5%92%8Cgit%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%BA%91%E7%AC%94%E8%AE%B0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/04/23/hello-world/"><img class="next-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Hello World</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8typora-git-picGo%E5%88%9B%E5%BB%BA%E4%BA%91%E7%AC%94%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text">使用typora+git+picGo创建云笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85typora%E5%AE%89%E8%A3%85"><span class="toc-number">1.1.</span> <span class="toc-text">安装typora安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85git"><span class="toc-number">1.2.</span> <span class="toc-text">安装git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEgithub-x2F-gitee%E7%BD%91%E7%AB%99%E7%9A%84ssh%E5%AF%86%E9%92%A5"><span class="toc-number">1.3.</span> <span class="toc-text">配置github&#x2F;gitee网站的ssh密钥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEpicGo%E5%9B%BE%E5%BA%8A"><span class="toc-number">1.4.</span> <span class="toc-text">配置picGo图床</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E5%86%99bat%E6%96%87%E4%BB%B6%E4%B8%80%E9%94%AE%E4%B8%8A%E4%BC%A0"><span class="toc-number">1.5.</span> <span class="toc-text">编写bat文件一键上传</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/04/23/%E4%BD%BF%E7%94%A8typora%E5%92%8Cgit%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%BA%91%E7%AC%94%E8%AE%B0/" title="使用typora和git搭建个人云笔记"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用typora和git搭建个人云笔记"/></a><div class="content"><a class="title" href="/2022/04/23/%E4%BD%BF%E7%94%A8typora%E5%92%8Cgit%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%BA%91%E7%AC%94%E8%AE%B0/" title="使用typora和git搭建个人云笔记">使用typora和git搭建个人云笔记</a><time datetime="2022-04-22T16:44:58.000Z" title="Created 2022-04-23 00:44:58">2022-04-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/23/hello-world/" title="Hello World"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2022/04/23/hello-world/" title="Hello World">Hello World</a><time datetime="2022-04-22T16:43:38.566Z" title="Created 2022-04-23 00:43:38">2022-04-23</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
